@@ -463,7 +463,7 @@ map.on('load', () => {
     });
   });
 
-  fetch('/Saved Places.json')
+  fetch('./Saved Places.json')
   .then(res => res.json())
   .then(data => {
     console.log(data);
@@ -548,7 +548,7 @@ map.on('load', () => {
 function renderIcons() {
   let iconItems = config.icons.map(icon => {
     return `<div class="icon-filter-item" data-id="${icon}">
-      <img src="/icons/${icon}.png" alt="" />
+      <img src="./icons/${icon}.png" alt="" />
     </div>`;
   });
 
@@ -636,7 +636,7 @@ function createMarker(props) {
   let divMarker = document.createElement("div");
   divMarker.classList.add("div-marker");
 
-  divMarker.innerHTML = `<img src="/icons/${icon}.png" alt=""/>`
+  divMarker.innerHTML = `<img src="./icons/${icon}.png" alt=""/>`
 
   return divMarker;
 }
